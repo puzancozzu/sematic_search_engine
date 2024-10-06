@@ -17,3 +17,5 @@ To run sreamlit app:
 ```bash
 streamlit run searchApp.py
 ```
+
+for more details explantaion - refer to the my_help.txt
