@@ -17,5 +17,15 @@ To run sreamlit app:
 ```bash
 streamlit run searchApp.py
 ```
+For more detailed explanations and guidance, please refer to my_help.txt
 
-for more details explantaion - refer to the my_help.txt
+## Workflow
+
+1. **Data Processing**: The dataset, which has already been cleaned, undergoes an additional check for NA values. Any NA values are replaced with `None` to ensure data consistency.
+
+2. **Embedding Creation**: Using a pretrained BERT model (available at [SBERT](https://sbert.net/docs/sentence_transformer/pretrained_models.html)), embeddings are generated for the relevant fields of the dataset. This process converts the textual data into vector representations.
+
+3. **Index Creation**: An index space is created in Elasticsearch to store the vector embeddings along with the associated data. The tabular data is transformed into JSON format, which is the desired format for ingestion into Elasticsearch.
+
+4. **Query Processing**: When a user inputs a keyword, the query is converted into an embedding. This query embedding is then compared with the document embeddings using distance metrics to generate search results. Documents with similarity scores above a specified threshold are returned as the output of the search.
+
