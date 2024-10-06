@@ -7,11 +7,13 @@ This project, aims to built a semantic search engine using BERT  and Elasticsear
 ## Installation Guide
 
 To Run the Semantic Search Engine, follow these steps:
-
-
+```bash
 git clone https://github.com/puzancozzu/sematic_search_engine.git
 cd semantic_search_engine
 pip install -r requirements.txt
+```
 
 To run sreamlit app:
+```bash
 streamlit run searchApp.py
+```
