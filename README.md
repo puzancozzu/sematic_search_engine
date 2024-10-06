@@ -29,3 +29,6 @@ For more detailed explanations and guidance, please refer to my_help.txt
 
 4. **Query Processing**: When a user inputs a keyword, the query is converted into an embedding. This query embedding is then compared with the document embeddings using distance metrics to generate search results. Documents with similarity scores above a specified threshold are returned as the output of the search.
 
+## Working demo
+
+![](demo.gif)
