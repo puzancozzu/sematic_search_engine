@@ -1,0 +1,42 @@
+1. Downlaod And Install elastiserach engine:
+    https://www.elastic.co/downloads/elasticsearch
+
+2. unzip and install the elastic search 
+    open command prompt: navigate to the folder where you have extract the file
+    then install it (command): .\bin\elasticsearch 
+        E:\semantic_search_engine\elasticsearch-8.15.2>.\bin\elasticsearch 
+
+    check the installation :
+        go to browser : https://localhost:9200/
+        for first time installation (user id and password is given at installation in command promt)
+            user : elastic
+            password :  iiGa0a1_zTfj8ijJPksW
+
+        (if a web window with some JSON apperr - installation completed successfully)
+
+3. Get the data create venev(if needed) - install elasticsearch, pandas, sentence_transformers
+
+4. indexData.ipynb
+        connect to elastic search
+        load the data 
+            do all the necessary EDA (done in another notebook)
+        convert relevant search filed reuired to vector using BERT model - pretrained
+            getting the embeddings vector
+            model : https://sbert.net/docs/sentence_transformer/pretrained_models.html
+
+
+5. indexMapping.py - making the mapping - JSON schema of the data_id present in out data_frame
+
+6. indexData.ipynb
+    CREATE new index in elastic search
+    converting data_frame data to JSON (key value pair)- for elastic search ingest
+    ingest the data/record into created index in elastic search
+
+    SEARCH THE DATA:
+        create the embedding of the "input _keyword" using BERT model
+        create a  QUERY of inputted keyword 
+        perfrom the elastic search - retive the results with matching embedding - semantic_search_engine
+
+7. Deploy to streanlit - searchApp.py
+    install streamlit in created_venv (elastic_venv)
+    extra : specify the threshold similarity score - under with result should not be displayed as they are far in semantics from inputted keyword
